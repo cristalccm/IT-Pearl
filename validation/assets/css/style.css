@@ -1,0 +1,23 @@
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display:inline-block;
+   vertical-align:left;
+    margin-left:5px;
+}
+
+label {
+    display:inline-block;   
+    padding: 5px;
+    text-align: right;
+    width: 160px;
+    font-weight: bold;
+}
+
+
+.line {
+    border-bottom: 1px solid #888;
+  }
+
+
