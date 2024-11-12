@@ -3,5 +3,56 @@ Color Scheme:
 */
 
 body{
-background-color:#B6E7F2;
+background-color:#5B89A6;
+font-family: Lexend;
 }
+header.primary{
+background-color:#6C7339;
+background-image: url(https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/670d51ab61e4bb001dd3d343.jpg);
+padding:30px;
+background-repeat: no-repeat;
+background-size:contain;
+display: flex;
+border: 5px solid, #4b5216;
+
+}
+
+header.primary div.hgroup{
+    text-align: center;
+    color: #00263d;
+    width:70%;
+  }
+  header.primary nav{
+    width:20%;
+  }
+  
+  header.primary nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  header.primary nav ul li{
+  margin-bottom: 10px;
+  }
+  header.primary nav ul li a{
+    border: 3px solid #5FA0D9;
+    border-right:10px solid #5FA0D9;
+    border-radius:10px 0;
+    color:white;
+    display:block;
+    background-color:rgba(0,0,0,.6);
+    padding:5px 5px 5px 0;
+    text-align:right;
+    transition: .5s;
+    text-decoration:none;
+  }
+  header.primary nav a:hover{
+    background-color:rgba(0,0,0, .9);
+    text-decoration:underline;
+  }
+
+
+#content{
+  line-height: 1.8rem;
+}
+

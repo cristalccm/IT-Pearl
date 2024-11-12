@@ -10,9 +10,10 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-
+/*--------Utility Classes------*/
 body{
   background-color:#101240;
+  font-family:'Lexend';
 }
 
 main{
@@ -37,4 +38,65 @@ header.primary {
     background-image: url(https://assets.codepen.io/7248/bg_1.png);
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    border-bottom: 3px solid #0ABFBF;
+    
+}
+header.primary h1, header.primary h2{
+  margin: 0;
+}
+header.primary h1 a{
+  color:#ffffff;
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+header.primary h2{
+  color: #ffffff;
+  text-shadow: 2px, 2px, #000;
+}
+header.primary div.hgroup{
+  width:70%;
+}
+
+header.primary nav{
+  width:30%;
+}
+
+header.primary nav ul{
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+header.primary nav ul li{
+margin-bottom: 10px;
+}
+header.primary nav ul li a{
+  border: 1px solid #cc3a67;
+  border-right:10px solid #cc3a67;
+  border-radius:20px 0;
+  color:white;
+  display:block;
+  background-color:rgba(0,0,0,.6);
+  padding:10px 10px 10px 0;
+  text-align:right;
+  transition: .5s;
+  text-decoration:none;
+}
+header.primary nav a:hover{
+  background-color:rgba(0,0,0, .9);
+  text-decoration:underline;
+}
+#content{
+  line-height: 1.8rem;
+}
+.container{
+  background-color: red;
+  padding: 40px;
+  margin:auto;
+}
+#content h2, #content h3{
+  color:#161A59;
+  border-left: 7.5px solid #D94179;
+  padding:7.5px;
+  border-radius:15px 0;
 }
