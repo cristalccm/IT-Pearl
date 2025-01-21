@@ -1,11 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>HTML5 Practice Document</title>
+  <meta charset="utf-8" />
+  <!-- I can leave notes to myself in the code -->
+  <meta name="description" content="Elevator Pitch - Short Keyword Rich Description" />
+  <meta name="author" content="Cristal Castle-McCall" />
 </head>
+
 <body>
-    
+  <h1>HTML5 Cheatsheet</h1>
+  <section id="form">
+    <h2>Form Example</h2>
+    <form action="processing-script.php" method="get">
+      <fieldset>
+        <legend>Sample Form</legend>
+        <label for="Name:">Name:</label><input type="text" id="name" name="name"/>
+          <label for="address">Address:</label>
+          <textarea id="address" name="address"></textarea>
+        <label for="color">Favorite Color</label>
+        <select id="color" name="color">
+          <option value="0">Orange</option>
+           <option value="R">Red</option>
+           <option value="B">Blue</option>
+          <option value="Null" selected>----</option>
+        </select>
+        <input type="submit" value="Send"></input>
+      </fieldset>
+    </form>
+  </section>
+  <section id="table">
+    <h2>Tables</h2>
+    <table border="1">
+      <caption>Shopping List</caption>
+      <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Cost</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <<tr>
+          <td>Mittens</td>
+          <td>1</td>
+          <td>$14.97</td>
+      </tr>
+        <tr>
+        <td>Kittens</td>
+        <td>1</td>
+        <td>Free</td>
+      </tr>
+      <tr>
+        <td>Hot Dogs</td>
+        <td>12</td>
+        <td>$6.97</td>
+      </tr>
+      </tbody>
+
+    </table>
+  </section>
+  <section id="headings">
+    <h1>Heading Level 1</h1>
+    <h2>Heading Level 2</h2>
+    <h3>Heading Level 3</h3>
+    <h4>Heading Level 4</h4>
+    <h5>Heading Level 5</h5>
+    <h6>Heading Level 6</h6>
+
+  </section>
+  <section id="lists">
+    <h2>Lists</h2>
+    <h3>Unorderd List</h3>
+    <ul>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ul>
+    <h3>Ordered List</h3>
+    <ol>
+      <li>List Item</li>
+      <li>List Item
+        <ul>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+          <li>List Item</li>
+        </ul>
+      </li>
+      <li>List Item</li>
+      <li>List Item</li>
+    </ol>
+    <h3>Definition List</h3>
+    <dl>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+      <dd>Definition Description</dd>
+      <dd>Definition Description</dd>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+      <dt>Definition Term</dt>
+      <dd>Definition Description</dd>
+
+    </dl>
+
+  </section>
+  <section id="text-level semantics">
+    <h2>Text-Level Semantics</h2>
+    <p>Lorem <em>ipsum dolor</em> sit amet consectetur<strong> adipisicing elit.</strong> Architecto voluptatem voluptates atque libero
+      <hr />dolorum obcaecati molestiae voluptatibus cupiditate facilis distinctio dicta cum asperiores deleniti, magni ex assumenda delectus repudiandae quae molestias laborum nesciunt debitis quas explicabo.<del> Rerum fugit esse nulla natus voluptatem</del><sub> eum animi, quas tempore voluptate</sub><sup> corrupti vero blanditiis?</sup>
+    </p>
+  </section>
+  <section id="quotes">
+    <h2>Quotes</h2>
+    <h3>Blockquote</h3>
+    <blockquote>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Praesentium magnam placeat, doloremque aliquam delectus ab omnis sed asperiores! Perspiciatis iure modi ullam, accusamus saepe eligendi.<cite>Words of Wisdom by Thomas Wallace</cite>
+      <blockquote>
+        <h3>Inline Quote</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <q>Tenetur enim rem blanditiis assumenda error asperiores quae hic! Ipsam, ducimus quo!</q></p>
+  </section>
+  <section id="hyperlinks">
+    <h2>Hyperlinks</h2>
+    <ul>
+      <li><a href="http://ualr.edu" target="_blank" title="Verbose description of the link">Absolute Link</a></li>
+      <li><a href="assets/img/image.jpg" download>Relative Link</a></li>
+      <li><a href="#lists">Anchor Link</a></li>
+      <li><a href="http://ualr.edu#news" target="_blank">Deep Link</a></li>
+      <li><a href="mailto:mail@ualr.edu">Email Link</a></li>
+    </ul>
+  </section>
+  <section id="images">
+    <h2>Images</h2>
+    <img src="https://thomaswallace.net/wp-content/uploads/2018/02/ualr.png" alt="UALR Logo" />
+     </section>
+  <section id="structural elements">
+        <h2>Structural Elements</h2>
+        <!--Preformat-->
+        <pre>
+  <code>&lt;main&gt;</code> 
+  <code>&lt;section&gt;</code>
+  <code>&lt;nav&gt;</code>
+  <code>&lt;header&gt;</code>
+  <code>&lt;footer&gt;</code>
+  <code>&lt;aside&gt;</code>
+  <code>&lt;article&gt;</code>
+  <code>&lt;figure&gt;</code>
+  <code>&lt;figcaption&gt;</code> 
+        </pre>
+      </section>
+  <footer>&copy; 2024 Cristal Castle-McCall | <a href="#top">Back to Top</a></footer>
 </body>
+
 </html>
