@@ -3,9 +3,28 @@ Color Scheme:
 */
 
 body{
-background-color:#934b99;
+background-color:#65a4b7;
 font-family: Lexend;
+margin: 20px;
 }
+.container{
+margin:40px 300px 40px 300px;
+display:inherit;
+float: left;
+}
+header.head{
+  padding:30px;
+  background-color: #342a67;
+background-repeat: no-repeat;
+background-size:contain;
+display: flex;
+border: 5px solid, #135691;
+color:aliceblue;
+
+
+
+}
+
 header.primary{
 background-color:#6C7339;
 background-image: url(https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/670d51ab61e4bb001dd3d343.jpg);
@@ -42,9 +61,10 @@ header.primary div.hgroup{
     display:block;
     background-color:rgba(0,0,0,.6);
     padding:5px 5px 5px 0;
-    text-align:right;
+    text-align:center;
     transition: .5s;
     text-decoration:none;
+    margin-top:40px;
   }
   header.primary nav a:hover{
     background-color:rgba(0,0,0, .9);
@@ -54,6 +74,10 @@ header.primary div.hgroup{
 
 #content{
   line-height: 1.8rem;
+}
+img{
+  height:300px;
+  width: 300px;
 }
 
 
