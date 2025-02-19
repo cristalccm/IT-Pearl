@@ -1,0 +1,115 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  img{
+    max-width: inherit;
+    
+  }
+  /*--------Utility Classes------*/
+  body{
+  background-color:lightsteelblue;
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    font-style: normal;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    margin: 0;
+    padding:0;
+    gap:10px;
+  }
+  
+  main{
+    background-color:#ffffff;
+    width:80vw;
+    margin-top:40px;
+    margin-right:auto;
+    margin-bottom:40px;
+    margin-left:auto;
+    margin: 40px auto 40px auto;
+    margin: 40px auto;
+    border:2px solid #0ABFBF;
+    border-radius:4px;
+  }
+  header.primary{
+   background-color:rgba(0, 73, 137, 0.832);
+   grid-column-start: 1;
+   grid-column-end: 12;
+   grid-row-start: 1;
+   grid-row-end: 2;
+ 
+   
+  
+   
+  }
+  header.primary h1{
+    color: #f6f6fa;
+    text-align: center;}
+
+  .topnav {
+    background-color:rgba(0, 73, 137, 0.832) ;
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+    
+  }
+  
+ 
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+
+  .topnav a:hover {
+    background-color: #022348;
+    color: rgb(255, 253, 253);
+  }
+  
+  .topnav ul{
+    list-style-type: none;
+  
+  }
+  img{
+    grid-column-start: 1;
+    grid-column-end: 12;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+.container{
+  color: #05114f;
+  margin-left: 40px;
+  margin-right: 40px;
+grid-column-start: 1;
+grid-column-end: 8;
+grid-row-start: 4;
+grid-row-end:10;
+}
+
+
+
+footer{
+  background-color: #022348;
+  color: #f2f2f2;
+  grid-column-start: 1;
+  grid-column-end: 12;
+  grid-row-start: 59;
+  grid-row-end: 60;
+
+}
+ 
+  
+
+  
