@@ -10,7 +10,7 @@ html {
   }
   /*--------Utility Classes------*/
   body{
-  background-color:lightsteelblue;
+  background-color:rgb(241, 245, 250);
     background-repeat: no-repeat;
     background-size:cover;
     font-family: "Poppins", serif;
@@ -85,17 +85,17 @@ html {
 
 .container{
   color: #05114f;
-  margin-left: 40px;
-  margin-right: 40px;
+ margin-top: 20px;
+ margin-left: 100px;
 grid-column-start: 1;
-grid-column-end: 8;
-grid-row-start: 4;
+grid-column-end: 5;
+grid-row-start: 2;
 grid-row-end:10;
 }
 h3{
-  grid-column-start: 3;
+  grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 11;
+  grid-row-start: 12;
 }
 .gallery {
   --s: 150px; /* control the size */
@@ -107,8 +107,8 @@ h3{
   width:600px;
   aspect-ratio: 1;
   grid-template-columns: repeat(3,auto);
-grid-column-start: 3;
-grid-column-end: 6;
+grid-column-start: 2;
+grid-column-end: 4;
 grid-row-start: 12;
 grid-row-end: 12;
 margin-top: 100px;
@@ -131,7 +131,17 @@ margin-top: 100px;
   height: calc(var(--s)*var(--f));
 }
 
+.col{
+  background-color: lightblue;
+padding:20px;
+  grid-column-start: 6;
+  grid-column-end: 12;
+}
+.col h2{
+  color:#022348;
+  text-decoration: underline;
 
+}
   
  
 
