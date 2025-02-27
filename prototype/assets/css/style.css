@@ -7,6 +7,13 @@ background-color:#65a4b7;
 font-family: Lexend;
 margin: 20px;
 }
+.main-body{
+background-image: url(https://images.unsplash.com/photo-1496571330383-9b977f4a021d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);  
+background-color:#b2e1ef;
+font-family: Lexend;
+margin: 20px;
+
+}
 .container{
 margin:40px 300px 40px 300px;
 display:inherit;
@@ -28,11 +35,12 @@ color:aliceblue;
 header.primary{
 background-color:#6C7339;
 background-image: url(https://res.cloudinary.com/jerrick/image/upload/d_642250b563292b35f27461a7.png,f_jpg,fl_progressive,q_auto,w_1024/670d51ab61e4bb001dd3d343.jpg);
-padding:30px;
+padding:0px;
 background-repeat: no-repeat;
 background-size:contain;
 display: flex;
 border: 5px solid, #4b5216;
+
 
 }
 
@@ -40,6 +48,7 @@ header.primary div.hgroup{
     text-align: center;
     color: #00263d;
     width:70%;
+    
   }
   header.primary nav{
     width:20%;
@@ -71,10 +80,17 @@ header.primary div.hgroup{
     text-decoration:underline;
   }
   header.main-header{
-    background-color: #4254a4;
+    background-color: #f0a2c2;
     text-align: center;
     font-size:15px;
+    border-radius: 5px;
 
+  }
+  .main-header h1{
+    color:#c31535;
+    font-size: 40px;
+    padding-top: 10px;
+  
   }
   
   ul {
@@ -82,7 +98,8 @@ header.primary div.hgroup{
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333f76;
+  background-color: #f23f17;
+  border-radius: 5px;
 }
 
 li {
@@ -127,7 +144,8 @@ li.dropdown {
   text-align: left;
 }
 
-.dropdown-content a:hover {background-color:#4254a4 ;}
+.dropdown-content a:hover {background-color:#293362 ;
+color:floralwhite;}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -142,5 +160,8 @@ img{
   width: 300px;
 }
 
-
+footer{
+margin-top:800px;
+font-size: large;
+}
 

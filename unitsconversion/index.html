@@ -21,7 +21,8 @@
                     data-rule-required="true"  data-msg-required="Value is Required" 
                     data-rule-number="true" data-msg-number="Value must be a Number">
             <label for="FromValue" class="error" id="FromValueMsg"></label>
-            <br><br>
+        </br>
+        <br>
 
             <label class="formlabel">From Unit: </label>
                 <label for="Centimeters">
@@ -46,6 +47,7 @@
                 <label for="Miles">
                     <input type="radio" name="Miles" id="MilesUnit" value = "mi">miles
                 </label>
+            </br>
                
                 <label class="formlabel">To Unit: </label>
                 <label for="Centimeters">
@@ -70,18 +72,18 @@
                 <label for="Miles">
                     <input type="radio" name="Miles" id="MilesUnit" value = "mi">miles
                 </label>
-            
+            </br>
            
          
         
-
+<br>
             <label class="formlabel">To Value: </label>
             <span id="Result"></span>
-            <br><br>
+            
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
             <input type="button" value="Clear" name="Clear" onclick="clearform();">
-
+        </br>
         </fieldset>
     </div>
 </form>
