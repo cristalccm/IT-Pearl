@@ -9,6 +9,9 @@ html {
   
     
   }
+  #camp{
+max-width: 90%;
+  }
   /*--------Utility Classes------*/
   body{
   background-color:rgb(241, 245, 250);

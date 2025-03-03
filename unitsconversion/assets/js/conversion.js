@@ -52,7 +52,6 @@ async function CalculateResult(operand1, operator, operand2) {
 function clearform() {
     "use strict";
     
-    /* Set all of the form values to blank or false */
     document.getElementById("Operand1").value = "";
     document.getElementById("Operand1Msg").innerHTML = "";
     document.getElementById("CentUnit").checked = false;
@@ -62,10 +61,14 @@ function clearform() {
     document.getElementById("FtUnit").checked = false;
     document.getElementById("YdUnit").checked = false;
     document.getElementById("MiUnit").checked = false;
-    document.getElementById("fromunitMsg").innerHTML = "";
-    document.getElementById("tounitMsg").innerHTML = "";
+    document.getElementById("Operand").value = "";
+    document.getElementById("OperandMsg").innerHTML = "";
+    document.getElementById("Operand2").value = "";
+    document.getElementById("Operand2Msg").innerHTML = "";
     document.getElementById("Result").innerHTML = "";
 }
+
+
 
 $( "#myform" ).validate({
 
