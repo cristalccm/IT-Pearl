@@ -1,75 +1,108 @@
-function calculate() {
-    "use strict";
-
-    // Get a reference to the form - Use the ID of the form
-    let form = $( "#myform" );
+$("#myform").validate({
     
-    // If all of the form elements are valid, the get the form values
-    if (form.valid()) {
-        
-        // Operand 1
-        let operand1 = document.getElementById("Operand1").value;
-
-        // Operator
-        // Get the value associated with the operator that was checked (+, -, *, or /)
-        let operator;
-        if (document.getElementById("AddOperator").checked) {
-            operator = document.getElementById("AddOperator").value;
-        }
-        if (document.getElementById("SubtractOperator").checked) {
-            operator = document.getElementById("SubtractOperator").value;
-        }
-        if (document.getElementById("MultiplyOperator").checked) {
-            operator = document.getElementById("MultiplyOperator").value;
-        }
-        if (document.getElementById("DivideOperator").checked) {
-            operator = document.getElementById("DivideOperator").value;
-        }
-        
-        // Operand 2
-        let operand2 = document.getElementById("Operand2").value;
-
-        CalculateResult(operand1, operator, operand2);
-    }
-}
-
-async function CalculateResult(operand1, operator, operand2) {
-    "use strict;"
-        
-        // URL and method used with AJAX Call
-        let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
-
-        /* AJAX calculator requires Operand1, Operator, and Operand2 */
-        myURL = myURL + "?Operand1=" + encodeURIComponent(operand1) + "&Operator=" + encodeURIComponent(operator) + "&Operand2=" + encodeURIComponent(operand2);
-
-        /* fetch the results */
-        let myCalcObject = await fetch(myURL);
-        let myResult = await myCalcObject.text();
-        
-        document.getElementById("Result").innerHTML = myResult;
-}
-
-function clearform() {
-    "use strict";
-    
-    document.getElementById("Operand1").value = "";
-    document.getElementById("Operand1Msg").innerHTML = "";
-    document.getElementById("CentUnit").checked = false;
-    document.getElementById("MetUnit").checked = false;
-    document.getElementById("KiloUnit").checked = false;
-    document.getElementById("InUnit").checked = false;
-    document.getElementById("FtUnit").checked = false;
-    document.getElementById("YdUnit").checked = false;
-    document.getElementById("MiUnit").checked = false;
-    document.getElementById("Operand").value = "";
-    document.getElementById("OperandMsg").innerHTML = "";
-    document.getElementById("Operand2").value = "";
-    document.getElementById("Operand2Msg").innerHTML = "";
-    document.getElementById("Result").innerHTML = "";
-}
-
-
-
-$( "#myform" ).validate({
-
 });
+
+function calculate(){
+    "use strict"
+    let form = $("#myform");
+
+
+     if (form.valid()){
+
+        let Fromvalue = document.getElementById("fromvalue").value;
+        let Fromunit = "";
+
+    
+        if (document.getElementById("fromcentimeters").checked){
+            Fromunit = "centimeters";
+        }
+            else if (document.getElementById("frommeters").checked){
+                Fromunit = "meters";
+        }
+        
+            else if (document.getElementById("fromkilometers").checked){
+                Fromunit = "kilometers";
+        }
+
+            else if (document.getElementById("frominches").checked){
+                Fromunit = "inches";
+        }
+
+            else if (document.getElementById("fromfeet").checked){
+                Fromunit = "feet";
+        }
+            else if (document.getElementById("fromyards").checked){
+                Fromunit = "yards";
+        }
+            else if (document.getElementById("frommiles").checked){
+                Fromunit = "miles";
+        }
+        
+        let Tounit="";
+
+        if (document.getElementById("tocentimeters").checked){
+            Tounit = "centimeters";
+        }
+            else if (document.getElementById("tometers").checked){
+                Tounit = "meters";
+        }
+
+            else if (document.getElementById("tokilometers").checked){
+                Tounit = "kilometers";
+        }
+
+            else if (document.getElementById("toinches").checked){
+                Tounit = "inches";
+        }
+
+            else if (document.getElementById("tofeet").checked){
+                Tounit = "feet";
+        }
+            else if (document.getElementById("toyards").checked){
+                Tounit = "yards";
+        }
+            else if (document.getElementById("tomiles").checked){
+                Tounit = "miles";
+        } 
+        
+        ConvertUnits(Fromvalue,Fromunit, Tounit);
+     }
+}
+
+        async function ConvertUnits(Fromvalue, Fromunit, Tounit){
+            "use strict";
+            let bruceUrl = " https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
+            bruceUrl= bruceUrl+ "?FromValue=" + encodeURIComponent(Fromvalue) + "&FromUnit=" + encodeURIComponent(Fromunit) + "&ToUnit=" + encodeURIComponent(Tounit);
+
+            let response = await fetch (bruceUrl);
+            let result = await response.json();
+
+            document.getElementById("tovalue").innerHTML=result;
+
+        }
+
+        function clearform(){
+            "use strict";
+            document.getElementById("fromvalue").value="";
+
+            document.getElementById("fromcentimeters").checked = false;
+            document.getElementById("frommeters").checked = false;
+            document.getElementById("fromkilometers").checked = false;
+            document.getElementById("frominches").checked = false;
+            document.getElementById("fromfeet").checked = false;
+            document.getElementById("fromyards").checked = false;
+            document.getElementById("frommiles").checked = false;
+         
+            document.getElementById("tocentimeters").checked = false;
+            document.getElementById("tometers").checked = false;
+            document.getElementById("tokilometers").checked = false; 
+            document.getElementById("toinches").checked = false;
+            document.getElementById("tofeet").checked = false; 
+            document.getElementById("toyards").checked = false; 
+            document.getElementById("tomiles").checked = false; 
+
+            document.getElementById("tovalue").innerHTML="";
+
+
+
+        }
