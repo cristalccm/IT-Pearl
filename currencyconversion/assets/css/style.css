@@ -1,21 +1,22 @@
-.formcontainer {
-    width: 1000px;
-    padding: 5px;
+body {
+    font-family: Arial, sans-serif;
+    text-align: left;
+    margin: 50px;
 }
-
-.formlabel {
-    display: inline-block;
-    width: 100px;
-    text-align: right;
-    padding: 5px;
+.converter {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+input, select, button {
+    margin: 5px;
+    padding: 10px;
+    width: 20%;
 }
 .error {
     color: red;
     padding-left: 5px;
 }
 
-h1 {
-    border-bottom: 3px solid #cc9900;
-    color: #996600;
-    font-size: 30px;
-}
