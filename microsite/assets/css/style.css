@@ -91,51 +91,102 @@ max-width: 90%;
 
 .container{
   color: #05114f;
+  position: relative;
  margin-top: 20px;
  margin-left: 100px;
 grid-column-start: 1;
 grid-column-end: 5;
 grid-row-start: 2;
-grid-row-end:10;
+grid-row-end:10;}
 
-}
+
+
 h3{
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row-start: 12;
 }
-.gallery {
-  --s: 150px; 
-  --g: 10px;  
-  --f: 1.5;   
-  
-  display: grid; 
-  gap: var(--g);
-  width:600px;
-  aspect-ratio: 2;
-  grid-template-columns: repeat(3,auto);
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 12;
-  grid-row-end: 12;
-  margin-top: 100px;
-  }
-
-.gallery > img {
-  width: 0;
-  height: 0;
-  min-height: 100%;
-  min-width: 100%;
-  object-fit: cover;
-  cursor: pointer;
-  filter: grayscale(50%);
-  transition: .45s linear;
+.slide-container{
+  color: #05114f;
+  position: relative;
+ margin-top: 20px;
+ margin-left: 100px;
+grid-column-start: 1;
+grid-column-end: 6;
+grid-row-start: 4;
+grid-row-end:10;}
+.mySlides {
+  display:none;
 }
 
-.gallery img:hover{
-  filter: grayscale(0);
-  width:  calc(var(--s)*var(--f));
-  height: calc(var(--s)*var(--f));
+
+.cursor {
+  cursor: pointer;
+}
+
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+.demo {
+  opacity: 0.6;
+  height:100px;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
 }
 
 .col{

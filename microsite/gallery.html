@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+<title>Island Beach State Park</title>
+ <meta charset="UTF-8" />
+ <meta name="description" content="a collection of information about Island Beach State Park" />
+ <meta name="author" content="Cristal Castle-McCall" />
+ <meta name="robots" content="noindex">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header role="banner" class="primary">
+    <img src="https://nj.gov/dep/parksandforests/images/deplogo-header.png" alt="Logo" class="logo">
+    <img src="https://nj.gov/dep/parksandforests/images/spslogo-header.png" alt="Logo" class="logo">
+    <h1>Island Beach State Park</h1> 
+    <nav class="topnav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activities.html">Activities</a></li>
+        <li><a href="lodging.html">Camping and Lodging</a></li>
+        <li><a href="gallery.html">Photo Gallery</a></li>
+      </ul>
+    </nav>
+   
+   
+  </header>
+<section id="content" class="container">
+<h2>Photo Gallery</h2>
+<div class="slide-container">
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+      <img src="https://www.jerseysbest.com/wp-content/uploads/2021/05/Island-Beach-State-Park-Beach.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+      <img src="https://njspots.com/wp-content/uploads/2020/03/March2020_IBSP_MattBaron_og.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+      <img src="https://www.happyfamilyart.com/wp-content/uploads/2016/08/IslandBeachStatePark7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+      <img src="https://live.staticflickr.com/2159/2239831985_21c4c732ec_b.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+      <img src="https://enviroquest.me/wp-content/uploads/2015/03/red-fox-on-snow-covered-dune.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+      <img src="https://media-cdn.tripadvisor.com/media/photo-s/02/8f/0d/a2/filename-manchester23jun12.jpg" style="width:100%">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.jerseysbest.com/wp-content/uploads/2021/05/Island-Beach-State-Park-Beach.jpg" style="width:100%" onclick="currentSlide(1)" alt="Arial view of the park">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://njspots.com/wp-content/uploads/2020/03/March2020_IBSP_MattBaron_og.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sunset at the park">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://www.happyfamilyart.com/wp-content/uploads/2016/08/IslandBeachStatePark7.jpg" style="width:100%" onclick="currentSlide(3)" alt="Trailhead">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://live.staticflickr.com/2159/2239831985_21c4c732ec_b.jpg" style="width:100%" onclick="currentSlide(4)" alt="Lifeguards">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://enviroquest.me/wp-content/uploads/2015/03/red-fox-on-snow-covered-dune.jpg" style="width:100%" onclick="currentSlide(5)" alt="Red fox in the dunes">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://media-cdn.tripadvisor.com/media/photo-s/02/8f/0d/a2/filename-manchester23jun12.jpg" style="width:100%" onclick="currentSlide(6)" alt="Fishing on the jetty">
+    </div>
+  </div>
+</div>
+</section>
+<script>
+  let slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
+<footer> 
+  <footer id="colophon" role="contentinfo">
+    <h6>&copy; 2025 | Cristal Castle-McCall|
+ <a href="mailto:ccastle@ualr.edu">Send email</a>|<a href="#top">Back To Top</a></h6>
+  </footer></footer>
+</body>
+</html>

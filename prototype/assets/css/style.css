@@ -176,6 +176,18 @@ font-size: 18px;
 font-weight: 200;
 
 }
+.reflection{
+  width:75%%;
+  height:75%;
+  padding:20px;
+  border-radius: 5px;
+  background-color: #f0a2c2;
+  color:#710f21;
+margin:100px;
+text-align:justify;
+font-size: 18px;
+font-weight: 200;
+}
 img{
   height:300px;
   width: 300px;

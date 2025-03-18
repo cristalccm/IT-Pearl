@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta charset="UTF-8">
-    <meta name="description" content="Currency Converter">
-    <meta name="keywords" content="JavaScript, HTML, CSS">
     <meta name="author" content="Cristal Castle-McCall">
-    <title>Currency Value History</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <title>Currency Converter</title>
-
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>Historical Currency Converter</title>
 </head>
 <body>
-    <div class="converter">
-        <h2>Currency Value History</h2>
-       <br>
-        <label class="formlabel" for="baseCurrency">Base Currency: </label><select id="baseCurrency" data-rule-required="true"data-msg-required="Base Currency is Required">
-            <option value="">Select a Currency...</option>
-            <option value="USD">Us Dollars</option>
-            <option value="USD">Swiss Francs</option>
-            <option value="EUR">Euros</option>
-            <option value="GBP">Chinese Yen</option>
-            <option value="INR">Mexican Pesos</option>
-        </select>
-        <label for="baseCurrency" class="error" id="baseCurrencymsg"></label>
-        <br><br>
-        <label class="formlabel" for="toCurrency">Convert to Currnecy: </label><select id="toCurrency"data-rule-required="true"data-msg-required="Convert to Currency is Required">
-            <option value="">Select a Currency...</option>
-            <option value="USD">US Dollars</option>
-            <option value="USD">Swiss Francs</option>
-            <option value="EUR">Euros</option>
-            <option value="GBP">Yen</option>
-            <option value="INR">Pesos</option>
-        </select>
-        <label for="toCurrency" class="error" id="toCurrencymsg"></label> 
-        <br><br>
-        <label class="formlabel" for="fromdate">From Date: </label>
-        <input type="date" id="fromdate" placeholder="Select date"data-rule-required="true" data-msg-required="From Date is Required">
-        <br><br>
-        <label class="formlabel" for="todate">To Date: </label>
-        <input type="date" id="todate" placeholder="Select date"data-rule-required="true" data-msg-required="To Date is Required">
-    <br>
-        <input type="button" value="Show Results" name="Calculate" onclick="calculate();">
-      <input type="button" value="Clear" name="Clear" onclick="clearform(); "novalidate>
-        <h3 id="result"></h3>
-    </div>
+    <h2>Historical Currency Converter</h2>
+    <label for="base-currency">Base Currency:</label>
+    <select id="base-currency">
+        <option value="USD">US Dollars</option>
+        <option value="EUR">Euros</option>
+        <option value="GBP">Great Britian Pound</option>
+        <option value="MPS">Mexican Pesos</option>
+        <option value="SWF">Swiss Franc</option>
+    </select>
+    
+    <label for="target-currency">Target Currency:</label>
+    <option value="USD">US Dollars</option>
+    <option value="EUR">Euros</option>
+    <option value="GBP">Great Britian Pound</option>
+    <option value="MPS">Mexican Pesos</option>
+    <option value="SWF">Swiss Franc</option>
+    <select id="target-currency">
 
-   
+    </select>
+    
+    <br>
+    <label for="amount">Amount:</label>
+    <input type="number" id="amount" placeholder="Enter amount" required>
+    
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" id="date" required>
+    
+    <br>
+    <button onclick="convertCurrency()">Convert</button>
+    <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
+    
+    <h3 id="result"></h3>
+    
+    
 </body>
 </html>
+

@@ -24,10 +24,7 @@ $(function() {
     }, 0)
       
     }) 
-    
-    
   
-    
   })
   
   $(document).on("click", ".img-c.active", function() {
