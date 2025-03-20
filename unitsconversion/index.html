@@ -26,26 +26,26 @@
 
             <label class="formlabel" for="fromunit">From Unit: </label>
                 <label for="fromcentimeters">
-                    <input type="radio" name="fromunit" id="fromcentimeters" value = "centimeters"
+                    <input type="radio" name="fromunit" id="fromcentimeters" value = "cm"
                            data-rule-required="true" data-msg-required="From Unit is Required" />centimeters
                 </label>
                 <label for="frommeters">
-                    <input type="radio" name="fromunit" id="frommeters" value = "meters">meters
+                    <input type="radio" name="fromunit" id="frommeters" value = "m">meters
                 </label>
                 <label for="fromkilometers">
-                    <input type="radio" name="fromunit" id="fromkilometers" value = "kilometers">kilometers
+                    <input type="radio" name="fromunit" id="fromkilometers" value = "km">kilometers
                 </label>
                 <label for="frominches">
-                    <input type="radio" name="fromunit" id="frominches" value = "inches">inches
+                    <input type="radio" name="fromunit" id="frominches" value = "in">inches
                 </label>
                 <label for="fromfeet">
-                    <input type="radio" name="fromunit" id="fromfeet" value = "feet">feet
+                    <input type="radio" name="fromunit" id="fromfeet" value = "ft">feet
                 </label>
                 <label for="fromyards">
-                    <input type="radio" name="fromunit" id="fromyards" value = "yards">yards
+                    <input type="radio" name="fromunit" id="fromyards" value = "yd">yards
                 </label>
                 <label for="frommiles">
-                    <input type="radio" name="fromunit" id="frommiles" value = "miles">miles
+                    <input type="radio" name="fromunit" id="frommiles" value = "mi">miles
                 </label>
             
                    
@@ -53,37 +53,37 @@
             <br><br>
             <label class="formlabel" for="tounit">To Unit: </label>
             <label for="tocentimeters">
-                <input type="radio" name="tounit" id="tocentimeters" value = "centimeters"
+                <input type="radio" name="tounit" id="tocentimeters" value = "cm"
                        data-rule-required="true" data-msg-required="To Unit is Required" />centimeters
             </label>
             <label for="tometers">
-                <input type="radio" name="tounit" id="tometers" value = "meters">meters
+                <input type="radio" name="tounit" id="tometers" value = "m">meters
             </label>
             <label for="tokilometers">
-                <input type="radio" name="tounit" id="tokilometers" value = "kilometers">kilometers
+                <input type="radio" name="tounit" id="tokilometers" value = "km">kilometers
             </label>
             <label for="toinches">
-                <input type="radio" name="tounit" id="toinches" value = "inches">inches
+                <input type="radio" name="tounit" id="toinches" value = "in">inches
             </label>
             <label for="tofeet">
-                <input type="radio" name="tounit" id="tofeet" value = "feet">feet
+                <input type="radio" name="tounit" id="tofeet" value = "ft">feet
             </label>
             <label for="toyards">
-                <input type="radio" name="tounit" id="toyards" value = "yards">yards
+                <input type="radio" name="tounit" id="toyards" value = "yd">yards
             </label>
             <label for="tomiles">
-                <input type="radio" name="tounit" id="tomiles" value = "miles">miles
-               
+                <input type="radio" name="tounit" id="tomiles" value = "mi">miles
+            </label>
         <label for="tounit" class="error" id="tounitMsg"></label>
         <br><br>
   
 
             <label class="formlabel">To Value: </label>
-            <span id="Result"></span>
+            <span id="tovalue"></span>
             <br><br>
 
             <input type="button" value="Calculate" name="Calculate" onclick="calculate();">
-            <input type="button" value="Clear" name="Clear" onclick="clearform(); "novalidate>
+            <input type="button" value="Clear" name="Clear" onclick="clearform();">
 
         </fieldset>
     </div>

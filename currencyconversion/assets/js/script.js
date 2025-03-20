@@ -36,7 +36,10 @@ $(document).ready(function () {
         }
 
         if (!isValid) return; 
-
+        if (baseCurrency === convertCurrency) {
+            $("#basecurrencyMsg").text("From and To currencies must be different.");
+            return;
+        }
        
         let apiKey = "RaBjYHqJ7DHONHdJgUhlaw8mchoe1NJG"; 
 
