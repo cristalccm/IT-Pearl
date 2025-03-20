@@ -1,48 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currency Value History">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
     <meta name="author" content="Cristal Castle-McCall">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <title>Historical Currency Converter</title>
+    <title>Currency Value History</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/script.js"></script>
 </head>
-<body>
-    <h2>Historical Currency Converter</h2>
-    <label for="base-currency">Base Currency:</label>
-    <select id="base-currency">
-        <option value="USD">US Dollars</option>
-        <option value="EUR">Euros</option>
-        <option value="GBP">Great Britian Pound</option>
-        <option value="MPS">Mexican Pesos</option>
-        <option value="SWF">Swiss Franc</option>
-    </select>
-    
-    <label for="target-currency">Target Currency:</label>
-    <option value="USD">US Dollars</option>
-    <option value="EUR">Euros</option>
-    <option value="GBP">Great Britian Pound</option>
-    <option value="MPS">Mexican Pesos</option>
-    <option value="SWF">Swiss Franc</option>
-    <select id="target-currency">
+    <body>
+         <main>
+        <form id="myform" onsubmit="return false;">
+            <div class="formcontainer">
+                <h1>Currency Value History</h1>
+                <label for="basecurrency" class="formlabel">Base Currency: </label>
+                <select id="basecurrency" name="basecurrency" class="select" data-rule-required="true" data-msg-required="Base Currency is Required">
+                    <option value="">Select a Currency...</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="MXN">Mexican Pesos</option>
+                    <option value="GBP">Great Britain Pound</option>
+                    <option value="CNY">Chinese Yuan</option>
+                    <option value="AUD">Australian Dollar</option>
+                  
+                </select>
+                <label for="basecurrency" class="error" id="basecurrencyMsg"></label>
+                <br>
+                 <label for="convertcurrency" class="formlabel"> Convert Currency: </label>
+                 <select id="convertcurrency" name="convertcurrency" class="select" data-rule-required="true" data-msg-required="Convert Currency is Required">
+                    <option value="">Select A Currency</option>
+                    <option value="USD">United States Dollar</option>
+                    <option value="MXN">Mexican Pesos</option>
+                    <option value="GBP">Great Britain Pound</option>
+                    <option value="CNY">Chinese Yuan</option>
+                    <option value="AUD">Australian Dollar</option>
+                </select>
+                <label for="convertcurrency" class="error" id="convertcurrencyMsg"></label>
+                <br>
+            <label for="fromdate" class="formlabel">From Date:</label>
+            <input type="date" id="fromdate" name="fromdate" required>
+            <label for="fromdate" class="error" id="fromdateMsg"></label>
+            <br>
+            <label for="todate" class="formlabel">To Date: </label>
+            <input type="date" id="todate" name="todate" required>
+            <label for="todate" class="error" id="todateMsg"></label>
+            <br><br>
 
-    </select>
-    
-    <br>
-    <label for="amount">Amount:</label>
-    <input type="number" id="amount" placeholder="Enter amount" required>
-    
-    <br>
-    <label for="date">Date:</label>
-    <input type="date" id="date" required>
-    
-    <br>
-    <button onclick="convertCurrency()">Convert</button>
-    <input type="button" value="Clear" name="Clear" onclick="clearform();" novalidate>
-    
-    <h3 id="result"></h3>
-    
-    
-</body>
-</html>
+            <input type="button" value="Show Results" id="display">
+            <input type="button" value="Clear" id="clear" name="clear" onclick="ClearForm();">
+            <hr>
+         </div>
+     </form>
+        <div id="chart-container">
+            <canvas id="chartjs-0"></canvas>
+        </div>
+           
+        
+    </main>
+    </body>
 

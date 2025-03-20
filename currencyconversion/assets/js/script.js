@@ -1,28 +1,123 @@
-async function convertCurrency() {
-    const baseCurrency = document.getElementById('base-currency').value;
-    const targetCurrency = document.getElementById('target-currency').value;
-    const amount = document.getElementById('amount').value;
-    const date = document.getElementById('date').value;
-    
-    if (!amount || !date) {
-        alert("Please enter a valid amount and date.");
-        return;
-    }
-    
-    const apiUrl = `https://api.exchangerate.host/${date}?base=${baseCurrency}&symbols=${targetCurrency}`;
-    
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
+$(document).ready(function () {
+    $("#display").click(function () {
         
-        if (data.rates && data.rates[targetCurrency]) {
-            const convertedAmount = (amount * data.rates[targetCurrency]).toFixed(2);
-            document.getElementById('result').innerText = `${amount} ${baseCurrency} = ${convertedAmount} ${targetCurrency} on ${date}`;
-        } else {
-            document.getElementById('result').innerText = "Exchange rate not available for the selected date.";
+        $(".error").text("");
+
+        let baseCurrency = $("#basecurrency").val();
+        let convertCurrency = $("#convertcurrency").val();
+        let fromDate = $("#fromdate").val();
+        let toDate = $("#todate").val();
+        let isValid = true;
+
+      
+        if (!baseCurrency) {
+            $("#basecurrencyMsg").text("Base currency is required.");
+            
+            isValid = false;
         }
-    } catch (error) {
-        console.error("Error fetching exchange rate:", error);
-        document.getElementById('result').innerText = "Error fetching exchange rate.";
+      
+        if (!convertCurrency) {
+            $("#convertcurrencyMsg").text("Convert currency is required.");
+            isValid = false;
+        }
+        if (!fromDate) {
+            $("#fromdateMsg").text("From date is required.");
+            isValid = false;
+        }
+        if (!toDate) {
+            $("#todateMsg").text("To date is required.");
+            isValid = false;
+        }
+
+        
+        if (fromDate && toDate && new Date(toDate) <= new Date(fromDate)) {
+            $("#todateMsg").text("To Date must be after From Date.");
+            isValid = false;
+        }
+
+        if (!isValid) return; 
+
+       
+        let apiKey = "RaBjYHqJ7DHONHdJgUhlaw8mchoe1NJG"; 
+
+       
+        let apiUrl = `https://api.polygon.io/v2/aggs/ticker/C:${baseCurrency}${convertCurrency}/range/1/day/${fromDate}/${toDate}?adjusted=true&sort=asc&apiKey=${apiKey}`;
+
+        
+        $.getJSON(apiUrl, function (data) {
+            if (data.results && data.results.length > 0) {
+                let labels = [];
+                let rates = [];
+
+                
+                data.results.forEach((item) => {
+                    let date = new Date(item.t).toISOString().split("T")[0];
+                    labels.push(date);
+                    rates.push(item.c); 
+                });
+
+               
+                drawChart(labels, rates, baseCurrency, convertCurrency);
+            } else {
+                alert("No data found for the selected range.");
+            }
+        }).fail(function () {
+            alert("Error fetching data. Check your API key and network connection.");
+        });
+    });
+
+   
+    function drawChart(labels, rates, base, convert) {
+        let ctx = document.getElementById("chartjs-0").getContext("2d");
+
+       
+        if (window.myChart) {
+            window.myChart.destroy();
+        }
+
+        window.myChart = new Chart(ctx, {
+            type: "line",
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: `Exchange Rate (${base} to ${convert})`,
+                        data: rates,
+                        borderColor: "indigo",
+                        backgroundColor: "rgba(227, 38, 227, 0.37)",
+                        borderWidth: 2,
+                       
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio:false,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: "Date",
+        
+                        },
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: "Rate",
+                        },
+                    },
+                },
+            },
+        });
     }
-}
+
+   
+    $("#clear").click(function () {
+        $("#myform")[0].reset();
+        $(".error").text("");
+        if (window.myChart) {
+            window.myChart.destroy();
+        }
+    });
+});

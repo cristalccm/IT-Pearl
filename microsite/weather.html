@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Forecast</title>
+    <meta name="description" content="a collection of information about Island Beach State Park" />
+    <meta name="author" content="Cristal Castle-McCall" />
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <header role="banner" class="primary">
+        <img src="https://nj.gov/dep/parksandforests/images/deplogo-header.png" alt="Logo" class="logo">
+        <img src="https://nj.gov/dep/parksandforests/images/spslogo-header.png" alt="Logo" class="logo">
+        <h1>Island Beach State Park</h1>   
+       
+        <nav class="topnav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Activities</a></li>
+            <li><a href="lodging.html">Camping and Lodging</a></li>
+            <li><a href="gallery.html">Photo</a></li>
+            <li><a href="weather.html">Weather</a></li>
+            <li><a href="https://form.jotform.com/250764781544161">Contact</a></li>
+          </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Temperature Forecast</h1>
+        
+        
+        <label for="location">Enter Location:</label>
+        <input type="text" id="location" placeholder="Enter city or park name">
+        <button id="search">Search</button>
+        <p id="error-message" class="error"></p>
+       
+
+       
+        <div class="location-details">
+            <h2>Location Information</h2>
+            <p><strong>Name:</strong> <span id="location-name"></span></p>
+            <p><strong>Region:</strong> <span id="admin-location"></span></p>
+            <p><strong>Country:</strong> <span id="country"></span></p>
+            <p><strong>Latitude:</strong> <span id="latitude"></span></p>
+            <p><strong>Longitude:</strong> <span id="longitude"></span></p>
+        </div>
+
+       
+        <h2>7-Day Forecast</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Temperature (°F)</th>
+                </tr>
+            </thead>
+            <tbody id="forecast-table-body"></tbody>
+        </table>
+
+       
+        <h2>Temperature Trend</h2>
+        <canvas id="forecast-chart"></canvas>
+    </div>
+    <div class="col">
+        <h2>Contact Info</h2>
+        <h3>Phone:</h3>
+        <p>732-793-0506</p>
+        <h3>Physical Address:</h3>
+        <p>2401 Central Ave.
+          Seaside Park, NJ 
+        </p>
+        <h3>Mailing Address:</h3>
+        <p>P.O. Box 37
+          Seaside Park, NJ
+        </p>
+        <h3>Email: islandbeach@dept.nj.gov</h3>
+        <p>2401 Central Ave.
+          Seaside Park, NJ 
+        </p>
+        <h2>Park Hours</h2>
+        <h3>Gate:</h3>
+        <p>8:00 A.M. to Dusk daily
+        </p>
+        <h3>Office:</h3>
+        <p> Weekdays 8am - 4pm
+          Sat. & Sun. 8am - 6pm 
+        </p>
+        <h2>Park Fees</h2>
+        <h3>Weekdays:</h3>
+        <p> NJ Residents: $6.00 Non-Residents: $12.00
+        </p>
+        <h3>Weekends and Holidays:</h3>
+        <p> NJ Residents: $10.00 Non-Residents: $20.00
+        </p>
+        <h3>Off-Season:</h3>
+        <p> NJ Residents: $5.00 Non-Residents: $10.00
+        </p>
+        <h3>Additional Resources</h3>
+        <ul>
+          <li><a href="https://nj.gov/dep/parksandforests/parks/islandbeachstatepark.html">NJ State Parks</a></li>
+          <li><a href="https://www.islandbeachnj.org/">islandbeachnj.org</a></li>
+        </ul>
+        <h3>Maps</h3>
+          <ul>
+           <li> <a href="https://nj.gov/dep/parksandforests/maps/islandbeach-area.pdf">Park Map</a></li>
+          <li><a href="https://nj.gov/dep/parksandforests/trailguides/docs/IBSP.pdf">Trail Map</a></li>
+        </ul>
+      </div>
+   
+    
+    <footer id="colophon" role="contentinfo">
+      <h6>&copy; 2025 | Cristal Castle-McCall | 
+   <a href="mailto:ccastle@ualr.edu">ccastle@ular.edu</a>|<a href="https://form.jotform.com/250764781544161">Contact</a></li></a><a href="#top">Back To Top</a></h6>
+    </footer>
+  
+    <script src="assets/js/weather.js"></script> 
+</body>
+</html>
+
