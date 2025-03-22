@@ -192,6 +192,10 @@ img{
   height:300px;
   width: 300px;
 }
+.page{
+  height: 300px;
+  width: 600px;
+}
 dt{
   text-decoration: underline;
   font-weight: 600;
