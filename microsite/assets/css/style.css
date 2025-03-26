@@ -103,15 +103,23 @@ grid-row-end:10;}
 
 
 h3{
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 6;
   grid-row-start: 12;
+  
+}
+h2{
+  font-size: 35px;
+}
+h2.gallery{
+  margin-left: 525px;
 }
 .slide-container{
   color: #05114f;
   position: relative;
+  width:1000px;
  margin-top: 20px;
- margin-left: 100px;
+ margin-left: 150px;
 grid-column-start: 1;
 grid-column-end: 6;
 grid-row-start: 4;
@@ -163,7 +171,7 @@ grid-row-end:10;}
 
 .caption-container {
   text-align: center;
-  background-color: #222;
+  background-color:rgba(1, 56, 105, 0.832);
   padding: 2px 16px;
   color: white;
 }
@@ -319,6 +327,7 @@ footer{
   grid-column-end: 12;
   grid-row-start: 59;
   grid-row-end: 60;
+  text-align: center;
 
 }
 footer a{
