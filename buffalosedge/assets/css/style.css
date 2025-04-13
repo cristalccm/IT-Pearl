@@ -116,7 +116,43 @@ footer{
   clear:both;
  
 }
+@media screen and (min-width:768px){
+  .row{
+     grid-template-columns:2,1fr;
+  }
+nav.navbar ul{
+  display: grid;
+  grid-template-columns: 40% auto ;
+ grid-template-areas: 
+ "nav nav nav nav"
+ ;
+
+}
+header.container{
+  max-width: 900px;
+  
+  
+  
+  
+  }
+}
+
+@media screen and (min-width:992px){
+    .row{
+     grid-template-columns:repeat(4, 1fr);
+  }
+}
 footer a{
   color:#f6f6fa;
+}
+@media only screen and (max-width: 460px) {
+  .related-links li a svg{display:none;}
+  
+}
+
+@media only screen and (max-width: 395px) {
+.related-links{
+flex-direction:column;
+  }
 }
     
