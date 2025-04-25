@@ -10,10 +10,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sigmar&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sigmar&family=Space+Grotesk:wght@<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.typekit.net/sda3rnl.css">
-
- 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
   <link rel="icon" href="assets/img/buffalo-logo.svg" type="image/svg+xml">
@@ -24,11 +23,10 @@
   <header role="banner" class="primary">
     <img src="assets/img/buffalo'sedgelogo.svg" alt="Buffalo's Edge Retreat Logo" class="logo">
     <h1>Buffalo's Edge Retreat</h1>
-    <button class="menu-toggle" aria-label="Toggle navigation">
-      &#9776; 
-    </button>
+   
 
     <nav class="navbar">
+    
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="cabin.html">Cabins</a></li>
@@ -36,16 +34,15 @@
         <li><a href="river.html">River Conditions</a></li>
         <li><a href="booking.html" class="now"> Book Now</a></li>
       </ul>
-    </nav>
    
-
-  </a>
+    </nav>
   </header>
 
   <div class="content">
+    <div class="hero" style="background-image: url('assets/img/buffalo.home.jpg');">
+      <h2 class="title">PADDLE, EXPLORE, BREATHE. </h2>
+    </div>
 
-    <img src="assets/img/buffalo.home.jpg" alt="Cabin nestled in the Ozark mountains" class="home-bg">
-    <h2 class="title">PADDLE, EXPLORE, BREATHE. </h2>
     <h2 class="tag">Adventure starts here.</h2>
 
     <section class="intro">
@@ -99,16 +96,8 @@
   <footer id="colophon" role="contentinfo">
     <h6>&copy; 2025 Buffalo's Edge Retreat | <a href="mailto:info@buffalosedge.com">info@buffalosedge.com</a> | <a href="#top">Back To Top</a></h6>
   </footer>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.querySelector(".menu-toggle");
-      const navbar = document.querySelector(".navbar");
-  
-      toggle.addEventListener("click", () => {
-        navbar.classList.toggle("open");
-      });
-    });
-  </script>
+
+
 </body>
 
 </html>
