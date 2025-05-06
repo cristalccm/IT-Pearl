@@ -17,7 +17,7 @@ body {
   background-size: cover;
   font-family: "filson-pro", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 img {
@@ -361,8 +361,15 @@ width:50%;
 .book-cabin{
   margin:200px 0;
 }
+
+.book-cabin h3{
+  font-size: 40px;
+}
 .book-canoe{
   margin:200px 0;
+}
+.book-canoe h3{
+  font-size: 40px;
 }
 .calendar-wrapper {
   display: block;
@@ -643,6 +650,14 @@ width:50%;
   font-size: 1rem;
   font-weight: 300;
   margin: 2em 0;
+}
+
+.map-container {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 

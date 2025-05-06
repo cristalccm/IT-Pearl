@@ -6,7 +6,7 @@
   <title>Buffalo's Edge Retreat</title>
   <meta name="description" content="Buffalo's Edge Retreat cabin and canoe rentals" />
   <meta name="author" content="Cassandra Helmick" />
-  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,14 @@
   <link rel="stylesheet" href="https://use.typekit.net/sda3rnl.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="icon" href="assets/img/buffalo-logo.svg" type="image/svg+xml">
 </head>
 
 <body>
 
   <header role="banner" class="primary">
-    <img src="assets/img/buffalo'sedgelogo.svg" alt="Buffalo's Edge Retreat Logo" class="logo">
+    <img src="assets/img/buffalo-logo.svg" alt="Buffalo's Edge Retreat Logo" class="logo">
     <h1>Buffalo's Edge Retreat</h1>
    
 
@@ -54,9 +54,8 @@
       </p>
 
       <hr>
-
-      <img src="assets/img/buffalo-river-map.jpg" alt="Map of the Buffalo National River">
-
+      <div id="map" class="map-container"></div>
+      <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
       <hr>
 
       <h3 class="story">Our Story</h3>
